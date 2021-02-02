@@ -6,7 +6,6 @@ const kafka = new Kafka({
 });
 
 const producer = kafka.producer({
-  idempotent: true,
   maxInFlightRequests: 5,
 });
 const consumer = kafka.consumer({ groupId: "test-group" });
